@@ -16,6 +16,7 @@ impl EventHandler for Handler {
     async fn message(&self, ctx: Context, msg: Message) {
         let hello_world = hello_world::HelloWorld::new();
         let pong = pong::Pong::new();
+        let paff = paff::Paff::new();
 
         match msg.content.as_str() {
             "ping" => {
@@ -24,6 +25,10 @@ impl EventHandler for Handler {
             "hello" | "Hello" => {
                 hello_world.run(ctx, msg).await;
             }
+            "paff" => {
+                paff.run(ctx, msg).await;
+            }
+
             _ => {}
         }
     }

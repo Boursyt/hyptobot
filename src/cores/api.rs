@@ -2,7 +2,6 @@ use crate::handler::Handler;
 use dotenv::dotenv;
 use serenity::model::prelude::*;
 use serenity::prelude::*;
-use std::env;
 
 pub async fn config_api() {
     // Configuration logic for the API with Serenity and le Discord API
